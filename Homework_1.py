@@ -36,7 +36,7 @@ def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
     return abs((((x1*y2) + (x2*y3) + (x3*y1)) - ((x1*y3) + (x2*y1) + (x3*y2)))/2) 
 
 def euclidean_distance(x1, y1, x2, y2):
-    return ((x1-x2)**2 + (y1-y2)**2)
+    return ((x1-x2)**2 + (y1-y2)**2)**0.5
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
     return euclidean_distance(x1,y1,x2,y2) + euclidean_distance(x2,y2,x3,y3) + euclidean_distance(x3,y3,x1,y1)
