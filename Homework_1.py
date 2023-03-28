@@ -7,11 +7,25 @@
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
 
+from math import sqrt, tan
+
+
 def fahrenheit2celsius(fahrenheit): 
-   ...
+   return (float(fahrenheit)-32)*(5/9)
 
 def what_to_wear(celsius):
-   ...
+    if float(celsius) <= -10:
+        return print ("Puffy Jacket")
+    elif float(celsius) >= -10 and float(celsius) <= 0:
+        return print ("Scarf")
+    elif float(celsius) >= 0 and float(celsius) <= 10:
+        return print ("Sweater")
+    elif float(celsius) >= 10 and float(celsius) <= 20:
+        return print ("Light Jacket")
+    else:
+        return print ("T-shirt")
+
+    
 
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
@@ -19,13 +33,13 @@ def what_to_wear(celsius):
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+    return abs((((x1*y2) + (x2*y3) + (x3*y1)) - ((x1*y3) + (x2*y1) + (x3*y2)))/2) 
 
 def euclidean_distance(x1, y1, x2, y2):
-    ...
+    return ((x1-x2)**2 + (y1-y2)**2)
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    return euclidean_distance(x1,y1,x2,y2) + euclidean_distance(x2,y2,x3,y3) + euclidean_distance(x3,y3,x1,y1)
 
 
 # ---------------------------- Exercise III -------------------------------------
@@ -34,13 +48,13 @@ def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
 
 
 def deg2rad(deg):
-    ...
+    return deg*(3.14159265359/180)
 
 def apothem(number_sides, length_side):
-   ...
+    return (length_side/(2*tan(deg2rad(180/number_sides))))
 
 def polygon_area(number_sides, length_side):
-   ...
+   return (length_side * number_sides * apothem(number_sides, length_side))/2
 
 
 # ---------------------------- Test -------------------------------------
