@@ -1,5 +1,5 @@
-# Name:
-# SBUID: 
+# Name: Seonghyun Park
+# SBUID: 115964198
 
 # Remove the ellipses (...) when writing your solutions.
 
